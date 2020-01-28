@@ -1,0 +1,27 @@
+[package]
+name = "fasta-shuffler"
+version = "0.1.0"
+authors = ["Joseph Guhlin <joseph.guhlin@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.7.3"
+flate2 = { version = "1.0.13", features = ["zlib"], default-features = false }
+snap = "0.2.5"
+# bincode = "1.2.1"
+crossbeam = "0.7.3"
+indicatif = "0.13.0"
+
+[dependencies.clap]
+version = "2.33"
+features = [ "suggestions", "color", "yaml", "wrap_help"]
+
+[profile.dev]
+# opt-level = 3
+
+[profile.release]
+opt-level = 3
+lto = true
+# debug = true # Uncomment when needing valgrind
