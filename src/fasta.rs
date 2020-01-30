@@ -1,3 +1,9 @@
+// TODO:
+// Filter out "unclassified" AND "environmental samples" from each level of the taxonomy
+// Support not only shuffling, BUT also support balancing taxon load for each category
+// I.e. each possibility should have an equal number of samples, better to increase others
+// if needed to hit that quota, but start off with less of a sliding window..
+
 use crossbeam::atomic::AtomicCell;
 
 use std::sync::{Arc, RwLock};
